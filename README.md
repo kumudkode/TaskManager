@@ -120,10 +120,9 @@ The application implements robust **search filtering** directly within the base 
 ![alt text](img/image-3.png)
 
 ![alt text](img/image-4.png)
+
 ![alt text](img/image-5.png)
 
-
-![alt text](img/image-2.png)
 
 ### Thanks you for looking
 
