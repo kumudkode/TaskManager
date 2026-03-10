@@ -8,8 +8,7 @@ The application uses **SQLite** combined with **Flask-SQLAlchemy** as its underl
 
 ### 2.1.3.2.1. ER Diagram
 
-```mermaid
-erDiagram
+```mermaiderDiagram
     Task {
         Integer id PK
         String title
