@@ -55,7 +55,7 @@
                             </a>
                         </th>
                         <th>Status</th>
-                        <th>Assigned By</th>
+                        <th>User Info</th>
                         <th class="text-end pe-4">Actions</th>
                     </tr>
                 </thead>
@@ -67,6 +67,11 @@
                             {% if task.description %}
                             <p class="text-muted small mb-0 text-truncate" style="max-width: 200px;">
                                 {{ task.description }}
+                            </p>
+                            {% endif %}
+                            {% if task.remarks %}
+                            <p class="text-secondary small mb-0 fst-italic text-truncate" style="max-width: 200px;">
+                                Remarks: {{ task.remarks }}
                             </p>
                             {% endif %}
                         </td>
@@ -90,8 +95,17 @@
                             {% endif %}
                         </td>
                         <td>
-                            <div class="small">
-                                <i class="bi bi-person-circle text-muted"></i> {{ task.created_by or 'Unknown' }}
+                            <div class="small mb-1">
+                                <strong class="text-muted">Created By:</strong> <span class="text-truncate">{{
+                                    task.created_by or 'Unknown' }}</span><br>
+                                <strong class="text-muted">Updated By:</strong> <span class="text-truncate">{{
+                                    task.updated_by or 'Unknown' }}</span>
+                            </div>
+                            <div class="text-muted" style="font-size: 0.70rem;">
+                                <strong>Created:</strong> {{ task.created_on.strftime('%Y-%m-%d %H:%M') if
+                                task.created_on else 'N/A' }}<br>
+                                <strong>Updated:</strong> {{ task.updated_on.strftime('%Y-%m-%d %H:%M') if
+                                task.updated_on else 'N/A' }}
                             </div>
                         </td>
                         <td class="text-end pe-4">
