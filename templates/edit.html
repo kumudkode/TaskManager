@@ -46,12 +46,16 @@
                     </div>
 
                     <div class="row mb-3">
-                        <div class="col-md-12">
-                            <label for="updated_by" class="form-label fw-bold">Updated By (Name / ID)</label>
-                            <input type="text" class="form-control" id="updated_by" name="updated_by"
-                                value="{{ task.updated_by or task.created_by or '' }}"
+                        <div class="col-md-9">
+                            <label for="updater_name" class="form-label fw-bold">Updater Name</label>
+                            <input type="text" class="form-control" id="updater_name" name="updater_name"
                                 placeholder="Who is updating this?">
                             <div class="form-text">Originally created by: {{ task.created_by or 'Unknown' }}</div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="updater_id" class="form-label fw-bold">Updater ID</label>
+                            <input type="text" class="form-control" id="updater_id" name="updater_id"
+                                placeholder="e.g. 456">
                         </div>
                     </div>
 

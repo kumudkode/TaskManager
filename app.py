@@ -69,8 +69,17 @@ def add():
         due_date = request.form.get('due_date')
         status = request.form.get('status')
         remarks = request.form.get('remarks')
-        created_by = request.form.get('created_by')
+        creator_name = request.form.get('creator_name', '').strip()
+        creator_id = request.form.get('creator_id', '').strip()
         
+        created_by = ""
+        if creator_name and creator_id:
+            created_by = f"{creator_name} (ID: {creator_id})"
+        elif creator_name:
+            created_by = creator_name
+        elif creator_id:
+            created_by = f"(ID: {creator_id})"
+            
         new_task = Task(
             title=title,
             description=description,
@@ -97,7 +106,19 @@ def edit(id):
         task.due_date = request.form.get('due_date')
         task.status = request.form.get('status')
         task.remarks = request.form.get('remarks')
-        task.updated_by = request.form.get('updated_by')
+        updater_name = request.form.get('updater_name', '').strip()
+        updater_id = request.form.get('updater_id', '').strip()
+        
+        updated_by = ""
+        if updater_name and updater_id:
+            updated_by = f"{updater_name} (ID: {updater_id})"
+        elif updater_name:
+            updated_by = updater_name
+        elif updater_id:
+            updated_by = f"(ID: {updater_id})"
+            
+        if updated_by:
+            task.updated_by = updated_by
         
         db.session.commit()
         return redirect(url_for('index'))
