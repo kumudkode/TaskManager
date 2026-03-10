@@ -116,9 +116,12 @@ The application implements robust **search filtering** directly within the base 
 
 ### Demo Image
 ![alt text](img/image-1.png)
-![alt text](img/image-2.png)
+
 ![alt text](img/image-3.png)
+
 ![alt text](img/image-4.png)
+
+![alt text](img/image-2.png)
 
 ### Thanks you for looking
 
