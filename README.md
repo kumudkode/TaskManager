@@ -15,21 +15,6 @@ The application uses **SQLite** combined with **Flask-SQLAlchemy** as its underl
 
 ### 2.1.3.2.1. ER Diagram
 ![alt text](img/image.png)
-                +----------------------+
-                |         TASK         |
-                +----------------------+
-                | Primary Key  id      |
-                |----------------------|
-                | title                |
-                | description          |
-                | due_date             |
-                | status               |
-                | remarks              |
-                | created_on           |
-                | updated_on           |
-                | created_by           |
-                | updated_by           |
-                +----------------------+
 
 ### 2.1.3.2.2. Data Dictionary
 | Field | Data Type | Properties | Description |
