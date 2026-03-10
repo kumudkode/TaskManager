@@ -15,21 +15,6 @@ The application uses **SQLite** combined with **Flask-SQLAlchemy** as its underl
 
 ### 2.1.3.2.1. ER Diagram
 ![alt text](img/image.png)
-                +----------------------+
-                |         TASK         |
-                +----------------------+
-                | Primary Key  id      |
-                |----------------------|
-                | title                |
-                | description          |
-                | due_date             |
-                | status               |
-                | remarks              |
-                | created_on           |
-                | updated_on           |
-                | created_by           |
-                | updated_by           |
-                +----------------------+
 
 ### 2.1.3.2.2. Data Dictionary
 | Field | Data Type | Properties | Description |
@@ -50,9 +35,10 @@ The application uses **SQLite** combined with **Flask-SQLAlchemy** as its underl
 - *No additional custom or composite indexing rules were defined, as the data model is simple and unified.*
 
 ### 2.1.3.2.4. Whether Code first of DB First approach has been used and why?
-A **Code First** (Model First / Object Relational Mapping) approach was utilized through Flask-SQLAlchemy. 
-**Why?**
-We define database schemas dynamically using Python classes (e.g., `class Task(db.Model)`) instead of writing raw SQL structural component scripts manually. The ORM mechanism translates and generates database schemas automatically (`db.create_all()`). This encapsulates our database architecture directly into programmatic logical models, facilitating simpler, secure integration alongside version control directly inside `app.py`, without requiring the developer to execute any disjoint DB setup or SQL syntax before operating the application.
+- A **Code First** (Model First / Object Relational Mapping) approach was utilized through Flask-SQLAlchemy. 
+- **Why?**
+- We define database schemas dynamically using Python classes (e.g., `class Task(db.Model)`) instead of writing raw SQL structural component scripts manually. The ORM mechanism translates and generates database schemas automatically (`db.create_all()`).
+- This encapsulates our database architecture directly into programmatic logical models, facilitating simpler, secure integration alongside version control directly inside `app.py`, without requiring the developer to execute any disjoint DB setup or SQL syntax before operating the application.
 
 ## 2.1.3.3. Structure of the application detailing -
 ### 2.1.3.3.2. Standard MVC server side page rendering has been used. Any of the SPA or MPA approaches can be used
@@ -130,10 +116,16 @@ The application implements robust **search filtering** directly within the base 
 
 ### Demo Image
 ![alt text](img/image-1.png)
-![alt text](img/image-2.png)
+
 ![alt text](img/image-3.png)
+
 ![alt text](img/image-4.png)
 ![alt text](img/image-5.png)
+
+
+![alt text](img/image-2.png)
+
+### Thanks you for looking
 
 
 
